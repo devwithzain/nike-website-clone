@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+	src: url("../fonts/HelveticaNowTextMedium.woff2");
+	font-family: HelveticaMedium;
+}
+
+@layer utilities {
+	.padding {
+		@apply p-11 lg:p-9 md:p-7 sm:p-5 xm:p-5;
+	}
+}

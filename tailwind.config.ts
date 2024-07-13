@@ -8,11 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        HelveticaMedium: ["HelveticaMedium", "sans-serif"]
       },
+      screens: {
+        xm: { max: "400px" },
+        sm: { min: "400px", max: "768px" },
+        md: { min: "769px", max: "1024px" },
+        lg: { min: "1025px", max: "1490px" },
+        xl: { min: "1500px", },
+      }
     },
   },
   plugins: [],
