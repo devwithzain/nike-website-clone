@@ -1,8 +1,8 @@
 "use client";
-import { classicShopItem, shoesCategoryItems } from "@/constants";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+import { classicShopItem, shoesCategoryItems } from "@/constants";
 
 export default function Classic() {
 	const [isHovered, setIsHovered] = useState(false);
@@ -25,8 +25,11 @@ export default function Classic() {
 					</Link>
 				))}
 			</div>
-			<div className="w-full padding mt-10">
-				<div className="w-full flex justify-center gap-36">
+			<div className="w-full flex items-center justify-center padding mt-10">
+				<div
+					className="w-fit flex justify-center gap-36"
+					onMouseEnter={() => setIsHovered(true)}
+					onMouseLeave={() => setIsHovered(false)}>
 					{shoesCategoryItems.map((item) => (
 						<div
 							className="flex flex-col gap-3"
@@ -36,12 +39,24 @@ export default function Classic() {
 							</h1>
 							{item.links.slice(0, 4).map((link) => (
 								<Link
-									className={`flex flex-col text-[17px] text-[#707072] font-HelveticaMedium`}
+									className={`flex hover:text-[#111111] flex-col text-[17px] text-[#707072] font-HelveticaMedium`}
 									key={link.id}
 									href={link.href}>
 									{link.title}
 								</Link>
 							))}
+							<>
+								{item.links.slice(4).map((link) => (
+									<Link
+										className={`flex hover:text-[#111111] h-0 overflow-hidden flex-col text-[17px] text-[#707072] font-HelveticaMedium transition-all duration-100 ease-in-out ${
+											isHovered && "h-auto"
+										}`}
+										key={link.id}
+										href={link.href}>
+										{link.title}
+									</Link>
+								))}
+							</>
 						</div>
 					))}
 				</div>

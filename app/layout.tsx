@@ -15,10 +15,8 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<div className="w-full absolute top-0 left-0">
-					<Header />
-					<Navbar />
-				</div>
+				<Header />
+				<Navbar />
 				{children}
 				<Footer />
 			</body>
