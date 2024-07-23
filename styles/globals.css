@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+	width: 0;
+}
+
 @font-face {
 	src: url("../fonts/HelveticaNowTextMedium.woff2");
 	font-family: HelveticaMedium;
+}
+
+@font-face {
+	src: url("../fonts/Nike-Futura-ot-300.woff2");
+	font-family: NikeFutura;
 }
 
 @layer utilities {

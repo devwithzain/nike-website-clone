@@ -21,7 +21,7 @@ export default function Footer() {
 		}
 	};
 	return (
-		<div className="w-full padding">
+		<div className="w-full padding border-t">
 			<div className="w-full flex justify-between gap-5 xm:flex-col sm:flex-col xm:gap-0 sm:gap-0">
 				{footerItems.map((item) => (
 					<div

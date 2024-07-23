@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        HelveticaMedium: ["HelveticaMedium", "sans-serif"]
+        NikeFutura: ["NikeFutura", "sans-serif"],
+        HelveticaMedium: ["HelveticaMedium", "sans-serif"],
       },
       screens: {
         xm: { max: "400px" },

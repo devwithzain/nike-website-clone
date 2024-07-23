@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { privacyPolicy } from "@/public";
@@ -32,10 +33,16 @@ export default function Copywright() {
 							}`}
 						/>
 					</div>
-					<div
-						className={`absolute py-2 border rounded-lg bg-white z-20 -bottom-[-30px] w-[200px] transition-all duration-200 ease-linear shadow-md ${
+					<motion.div
+						className={`absolute py-2 border rounded-lg bg-white bottom-[30px] w-[200px] transition-all duration-200 ease-linear shadow-md ${
 							hovered ? "block" : "hidden"
-						}`}>
+						}`}
+						initial={{ y: 30 }}
+						whileInView={{ y: 0 }}
+						transition={{
+							duration: 0.5,
+							ease: "backOut",
+						}}>
 						{[
 							"Nike Air",
 							"Nike Air Force 1",
@@ -56,7 +63,7 @@ export default function Copywright() {
 								{item}
 							</h1>
 						))}
-					</div>
+					</motion.div>
 				</div>
 				<h1 className="text-[14px] text-[#707072] font-HelveticaMedium font-medium cursor-pointer hover:text-[#111111]">
 					Terms of Sale

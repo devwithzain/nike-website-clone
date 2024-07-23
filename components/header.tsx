@@ -1,6 +1,6 @@
-import { arrowStart, jordan } from "@/public";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { arrowStart, jordan } from "@/public";
 
 export default function Header() {
 	return (
