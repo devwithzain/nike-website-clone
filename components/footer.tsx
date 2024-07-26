@@ -7,13 +7,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Footer() {
-	const [activeAccordion, setActiveAccordion] = useState<string | null>(
-		footerItems[0]?.id || null,
-	);
+	const [activeAccordion, setActiveAccordion] = useState<
+		number | string | null
+	>(footerItems[0]?.id || null);
 
 	const phrases = ["Process"];
 
-	const toggleAccordion = (itemId: string) => {
+	const toggleAccordion = (itemId: number) => {
 		if (activeAccordion === itemId) {
 			setActiveAccordion(null);
 		} else {
