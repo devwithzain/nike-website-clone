@@ -45,18 +45,20 @@ export default function Classic() {
 									{link.title}
 								</Link>
 							))}
-							<>
-								{item.links.slice(4).map((link) => (
-									<Link
-										className={`flex hover:text-[#111111] h-0 overflow-hidden flex-col text-[17px] text-[#707072] font-HelveticaMedium transition-all duration-100 ease-in-out ${
-											isHovered && "h-auto"
-										}`}
-										key={link.id}
-										href={link.href}>
-										{link.title}
-									</Link>
-								))}
-							</>
+							{isHovered && (
+								<>
+									{item.links.slice(4).map((link) => (
+										<Link
+											className={`flex hover:text-[#111111] h-0 overflow-hidden flex-col text-[17px] text-[#707072] font-HelveticaMedium transition-all duration-100 ease-in-out ${
+												isHovered && "h-auto"
+											}`}
+											key={link.id}
+											href={link.href}>
+											{link.title}
+										</Link>
+									))}
+								</>
+							)}
 						</div>
 					))}
 				</div>

@@ -253,6 +253,154 @@ export const shoesCategoryItems = [
    },
 ];
 
+export const navbarCategoryItems = [
+   {
+      id: 1,
+      title: "Get Set for School",
+      links: [
+         {
+            id: 1,
+            title: "Extra 25% Off Select Styles",
+            href: "gift-cards"
+         },
+         {
+            id: 2,
+            title: "Shop the Collection",
+            href: "retail"
+         },
+         {
+            id: 3,
+            title: "Shopping Guide",
+            href: "register"
+         },
+         {
+            id: 4,
+            title: "Bags & Backpacks",
+            href: "nikexnba"
+         },
+      ]
+   },
+   {
+      id: 2,
+      title: "New & Featured",
+      links: [
+         {
+            id: 1,
+            title: "New Arrivals",
+            href: "/help"
+         },
+         {
+            id: 2,
+            title: "Best Sellers",
+            href: "/orders/details"
+         },
+         {
+            id: 3,
+            title: "New & Upcoming Drops",
+            href: "/help/a/shipping-delivery"
+         },
+      ]
+   },
+   {
+      id: 3,
+      title: "Trending",
+      links: [
+         {
+            id: 1,
+            title: "ACG",
+            href: "https://about.nike.com/en"
+         },
+         {
+            id: 2,
+            title: "Retro Running",
+            href: "https://about.nike.com/en/newsroom"
+         },
+         {
+            id: 3,
+            title: "Aster Pink Shop",
+            href: "https://jobs.nike.com/"
+         },
+         {
+            id: 4,
+            title: "Shop Sport",
+            href: "https://investors.nike.com/Home/default.aspx"
+         },
+      ]
+   },
+   {
+      id: 4,
+      title: "Shop Classics",
+      links: [
+         {
+            id: 1,
+            title: "Dunk",
+            href: "/help/a/student-discount"
+         },
+         {
+            id: 2,
+            title: "Air Jordan 1",
+            href: "/help/a/military-discount"
+         },
+         {
+            id: 3,
+            title: "Air Force",
+            href: "/help/a/teacher-discount"
+         },
+         {
+            id: 4,
+            title: "Air Max",
+            href: "/help/a/first-responders-discount"
+         },
+         {
+            id: 5,
+            title: "Blazer",
+            href: "/help/a/birthday-terms-promo"
+         },
+         {
+            id: 6,
+            title: "Vomero",
+            href: "/help/a/birthday-terms-promo"
+         },
+      ]
+   },
+   {
+      id: 5,
+      title: "Explore",
+      links: [
+         {
+            id: 1,
+            title: "SNKRS Launch Calender",
+            href: "/help/a/student-discount"
+         },
+         {
+            id: 2,
+            title: "Running Shoe Finder",
+            href: "/help/a/military-discount"
+         },
+         {
+            id: 3,
+            title: "Bra Finder",
+            href: "/help/a/teacher-discount"
+         },
+         {
+            id: 4,
+            title: "Product Care",
+            href: "/help/a/first-responders-discount"
+         },
+         {
+            id: 5,
+            title: "Member Rewards",
+            href: "/help/a/birthday-terms-promo"
+         },
+         {
+            id: 6,
+            title: "Buying Guides",
+            href: "/help/a/birthday-terms-promo"
+         },
+      ]
+   },
+];
+
 export const footerItems = [
    {
       id: 1,

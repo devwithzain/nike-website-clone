@@ -9,8 +9,8 @@ export default function Header() {
 	const [hovered, setHovered] = useState(false);
 
 	return (
-		<div className="w-full bg-[#F5F5F5] py-2 px-10 z-50">
-			<div className="w-full flex justify-between items-center gap-2">
+		<div className="w-full bg-[#F5F5F5] h-[4vh] flex items-center px-10 z-50">
+			<div className="w-full flex justify-between items-center gap-2 h-full">
 				<div className="flex items-center gap-2">
 					<Image
 						src={jordan}
@@ -21,18 +21,17 @@ export default function Header() {
 						alt="arrowStart"
 					/>
 				</div>
-				<div className="flex items-center gap-[12px]">
+				<div className="flex h-full items-center gap-[12px]">
 					<Link
 						href={""}
-						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium">
+						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium h-full flex items-center">
 						Find a Store
 					</Link>
 					<span className="w-[1px] h-[14px] bg-black" />
-					<div className="flex items-center gap-2 relative transition-all duration-200 ease-linear">
+					<div className="flex items-center gap-2 relative transition-all duration-200 ease-linear h-full">
 						<div
-							className="flex items-center gap-2 cursor-pointer transition-all duration-200 ease-linear"
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}>
+							className="flex items-center gap-2 cursor-pointer transition-all duration-200 ease-linear h-full"
+							onMouseEnter={() => setHovered(true)}>
 							<Link
 								href={"/help"}
 								className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium">
@@ -40,7 +39,7 @@ export default function Header() {
 							</Link>
 						</div>
 						<motion.div
-							className={`absolute py-2 border rounded-lg top-[18px] bg-white left-[-200px] w-[250px] transition-all duration-200 ease-linear z-20 shadow-md ${
+							className={`absolute py-2 border rounded-lg top-[40px] bg-white left-[-200px] w-[250px] transition-all duration-200 ease-linear z-20 shadow-md ${
 								hovered ? "block" : "hidden"
 							}`}
 							initial={{ y: -10 }}
@@ -77,13 +76,13 @@ export default function Header() {
 					<span className="w-[1px] h-[14px] bg-black" />
 					<Link
 						href={""}
-						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium">
+						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium h-full flex items-center">
 						Join Us
 					</Link>
 					<span className="w-[1px] h-[14px] bg-black" />
 					<Link
 						href={""}
-						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium">
+						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium h-full flex items-center">
 						Sign In
 					</Link>
 				</div>
