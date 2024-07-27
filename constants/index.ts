@@ -150,12 +150,12 @@ export const shoesCategoryItems = [
          },
          {
             id: 4,
-            title: "Hoodies & Pullovers",
+            title: "Joggers & Sweetpants",
             href: "https://investors.nike.com/Home/default.aspx"
          },
          {
             id: 5,
-            title: "Joggers & Sweetpants",
+            title: "Hoodies & Pullovers",
             href: "https://about.nike.com/en/impact"
          },
          {
