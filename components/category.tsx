@@ -14,10 +14,10 @@ export default function Category() {
 					<div className="absolute left-10 bottom-10 flex flex-col gap-5">
 						<div>
 							<h4 className="text-[16px] text-white font-HelveticaMedium font-medium">
-								Back to School
+								Create the Future
 							</h4>
 							<h1 className="text-[25px] text-white font-HelveticaMedium font-medium">
-								Playground Pros
+								Air Force 1
 							</h1>
 						</div>
 						<button className="w-fit text-[16px] font-HelveticaMedium font-medium text-black bg-white py-2 px-4 rounded-full">
@@ -34,10 +34,10 @@ export default function Category() {
 					<div className="absolute left-10 bottom-10 flex flex-col gap-5">
 						<div>
 							<h4 className="text-[16px] text-white font-HelveticaMedium font-medium">
-								Flexibility and Stability
+								Fits of the Week
 							</h4>
 							<h1 className="text-[25px] text-white font-HelveticaMedium font-medium">
-								Nike Free Metcon 6
+								The Style of Sport
 							</h1>
 						</div>
 						<button className="w-fit text-[16px] font-HelveticaMedium font-medium text-black bg-white py-2 px-4 rounded-full">
@@ -56,10 +56,10 @@ export default function Category() {
 					<div className="absolute left-10 bottom-10 flex flex-col gap-5">
 						<div>
 							<h4 className="text-[16px] text-white font-HelveticaMedium font-medium">
-								Looks Smooth, Feels Smoother
+								Running Essentials
 							</h4>
 							<h1 className="text-[25px] text-white font-HelveticaMedium font-medium">
-								Nike Alate Bra
+								Pegasus 41 & More
 							</h1>
 						</div>
 						<button className="w-fit text-[16px] font-HelveticaMedium font-medium text-black bg-white py-2 px-4 rounded-full">
@@ -76,10 +76,10 @@ export default function Category() {
 					<div className="absolute left-10 bottom-10 flex flex-col gap-5">
 						<div>
 							<h4 className="text-[16px] text-white font-HelveticaMedium font-medium">
-								Everyday Essentials
+								Jordan Women
 							</h4>
 							<h1 className="text-[25px] text-white font-HelveticaMedium font-medium">
-								Nike Tech Reimagined
+								Sport Essentials
 							</h1>
 						</div>
 						<button className="w-fit text-[16px] font-HelveticaMedium font-medium text-black bg-white py-2 px-4 rounded-full">

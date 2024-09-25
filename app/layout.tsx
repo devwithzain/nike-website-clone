@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { Footer, Header, Navbar } from "@/components";
+import { Footer, Navbar } from "@/components";
 
 export const metadata: Metadata = {
 	title: "Nike. Just Do it. Nike.com",
@@ -15,7 +15,6 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<Header />
 				<Navbar />
 				{children}
 				<Footer />
