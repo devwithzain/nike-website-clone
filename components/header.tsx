@@ -2,8 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { arrowStart, jordan } from "@/public";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
 	const [hovered, setHovered] = useState(false);
@@ -24,28 +24,30 @@ export default function Header() {
 				<div className="flex h-full items-center gap-[12px]">
 					<Link
 						href={""}
-						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium h-full flex items-center">
+						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium h-full flex items-center hover:opacity-70">
 						Find a Store
 					</Link>
 					<span className="w-[1px] h-[14px] bg-black" />
-					<div className="flex items-center gap-2 relative transition-all duration-200 ease-linear h-full z-50">
+					<div className="flex items-center gap-2 relative transition-all duration-200 ease-linear h-full z-[999]">
 						<div className="flex items-center gap-2 cursor-pointer  relative transition-all duration-200 ease-linear h-full">
 							<Link
 								href={"/help"}
-								className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium"
+								className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium hover:opacity-70"
 								onMouseEnter={() => setHovered(true)}
 								onMouseLeave={() => setHovered(false)}>
 								Help
 							</Link>
-							<span
-								onMouseEnter={() => setHovered(true)}
-								className="absolute left-0 -bottom-7 w-full h-full"
-							/>
+							{hovered && (
+								<span
+									onMouseEnter={() => setHovered(true)}
+									className="absolute left-0 -bottom-7 w-full h-full"
+								/>
+							)}
 						</div>
 						<AnimatePresence mode="wait">
 							{hovered && (
 								<motion.div
-									className="absolute py-2 border rounded-lg top-[40px] bg-white left-[-200px] w-[250px] transition-all duration-200 ease-linear z-20 shadow-md"
+									className="absolute py-2 border rounded-lg top-[40px] bg-white left-[-200px] w-[250px] transition-all duration-200 ease-linear shadow-md"
 									initial={{ y: -10, opacity: 0 }}
 									animate={{ y: 0, opacity: 1 }}
 									exit={{ y: -10, opacity: 0 }}
@@ -71,7 +73,7 @@ export default function Header() {
 									].map((item, index) => (
 										<h1
 											key={index}
-											className="text-[12px] py-1 px-6 text-[#707072] font-HelveticaMedium font-medium cursor-pointer hover:text-[#111111]">
+											className="text-sm py-1 px-6 text-[#707072] font-HelveticaNowText leading-tight font-medium cursor-pointer hover:text-[#111111]">
 											{item}
 										</h1>
 									))}
@@ -82,13 +84,13 @@ export default function Header() {
 					<span className="w-[1px] h-[14px] bg-black" />
 					<Link
 						href={""}
-						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium h-full flex items-center">
+						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium h-full flex items-center hover:opacity-70">
 						Join Us
 					</Link>
 					<span className="w-[1px] h-[14px] bg-black" />
 					<Link
 						href={""}
-						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium h-full flex items-center">
+						className="text-[12px] cursor-pointer text-[#111111] font-HelveticaMedium h-full flex items-center hover:opacity-70">
 						Sign In
 					</Link>
 				</div>

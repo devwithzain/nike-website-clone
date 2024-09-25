@@ -49,10 +49,10 @@ export default function Classic() {
 						</div>
 					</SwiperSlide>
 				))}
-				<div className="flex w-full gap-2 px-10 !absolute !top-1/2 items-center justify-between z-50">
+				<div className="flex w-full gap-2 px-10 !absolute !top-1/2 items-center justify-between">
 					<div
 						onClick={handlePrev}
-						className="bg-white transition-all duration-200 ease-linear cursor-pointer p-[6px] rounded-full">
+						className="bg-white transition-all duration-200 ease-linear cursor-pointer p-[6px] rounded-full z-50">
 						<Image
 							src={arrowLeft}
 							alt="arrowLeft"
@@ -62,7 +62,7 @@ export default function Classic() {
 					</div>
 					<div
 						onClick={handleNext}
-						className="bg-white transition-all duration-200 ease-linear cursor-pointer p-[6px] rounded-full">
+						className="bg-white transition-all duration-200 ease-linear cursor-pointer p-[6px] rounded-full z-50">
 						<Image
 							src={arrowRight}
 							alt="arrowRight"

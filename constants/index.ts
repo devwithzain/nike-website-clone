@@ -249,52 +249,42 @@ export const shoesCategoryItems = [
    },
 ];
 
-export const navbarCategoryItems = [
+export const navbarCategoryNewItems = [
    {
       id: 1,
-      title: "Get Set for School",
+      title: "Limited Time",
       links: [
          {
             id: 1,
-            title: "Extra 25% Off Select Styles",
-            href: "gift-cards"
-         },
-         {
-            id: 2,
-            title: "Shop the Collection",
-            href: "retail"
-         },
-         {
-            id: 3,
-            title: "Shopping Guide",
-            href: "register"
-         },
-         {
-            id: 4,
-            title: "Bags & Backpacks",
-            href: "nikexnba"
-         },
+            title: "Extra 20% Off Select Styles",
+            href: "#"
+         }
       ]
    },
    {
       id: 2,
-      title: "New & Featured",
+      title: "New",
       links: [
          {
             id: 1,
             title: "New Arrivals",
-            href: "/help"
+            href: "#"
          },
          {
             id: 2,
             title: "Best Sellers",
-            href: "/orders/details"
+            href: "#"
          },
          {
             id: 3,
             title: "New & Upcoming Drops",
-            href: "/help/a/shipping-delivery"
+            href: "#"
          },
+         {
+            id: 4,
+            title: "SNKRS Launch Calendar",
+            href: "#"
+         }
       ]
    },
    {
@@ -303,99 +293,1283 @@ export const navbarCategoryItems = [
       links: [
          {
             id: 1,
-            title: "ACG",
-            href: "https://about.nike.com/en"
+            title: "Serena Williams Design Crew",
+            href: "#"
          },
          {
             id: 2,
-            title: "Retro Running",
-            href: "https://about.nike.com/en/newsroom"
+            title: "ACG Essentials",
+            href: "#"
          },
          {
             id: 3,
-            title: "Aster Pink Shop",
-            href: "https://jobs.nike.com/"
+            title: "Retro Running",
+            href: "#"
          },
          {
             id: 4,
+            title: "Canyon Pink Shop",
+            href: "#"
+         },
+         {
+            id: 5,
             title: "Shop Sport",
-            href: "https://investors.nike.com/Home/default.aspx"
+            href: "#"
          },
       ]
    },
    {
-      id: 4,
+      id: 3,
       title: "Shop Classics",
       links: [
          {
             id: 1,
             title: "Dunk",
-            href: "/help/a/student-discount"
+            href: "#"
          },
          {
             id: 2,
             title: "Air Jordan 1",
-            href: "/help/a/military-discount"
+            href: "#"
          },
          {
             id: 3,
             title: "Air Force",
-            href: "/help/a/teacher-discount"
+            href: "#"
          },
          {
             id: 4,
             title: "Air Max",
-            href: "/help/a/first-responders-discount"
+            href: "#"
          },
          {
             id: 5,
             title: "Blazer",
-            href: "/help/a/birthday-terms-promo"
+            href: "#"
          },
          {
             id: 6,
             title: "Vomero",
-            href: "/help/a/birthday-terms-promo"
-         },
+            href: "#"
+         }
       ]
    },
    {
-      id: 5,
+      id: 4,
       title: "Explore",
       links: [
          {
             id: 1,
-            title: "SNKRS Launch Calender",
-            href: "/help/a/student-discount"
+            title: "SNKRS Launch Calendar",
+            href: "#"
          },
          {
             id: 2,
             title: "Running Shoe Finder",
-            href: "/help/a/military-discount"
+            href: "#"
          },
          {
             id: 3,
             title: "Bra Finder",
-            href: "/help/a/teacher-discount"
+            href: "#"
          },
          {
             id: 4,
             title: "Product Care",
-            href: "/help/a/first-responders-discount"
+            href: "#"
          },
          {
             id: 5,
             title: "Member Rewards",
-            href: "/help/a/birthday-terms-promo"
+            href: "#"
          },
          {
             id: 6,
             title: "Buying Guides",
-            href: "/help/a/birthday-terms-promo"
+            href: "#"
+         }
+      ]
+   }
+];
+
+export const navbarCategoryMenItems = [
+   {
+      id: 1,
+      title: "Limited Time",
+      links: [
+         {
+            id: 1,
+            title: "Extra 20% Off Select Styles",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 2,
+      title: "New",
+      links: [
+         {
+            id: 1,
+            title: "New Arrivals",
+            href: "#"
          },
+         {
+            id: 2,
+            title: "Best Sellers",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "New & Upcoming Drops",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 3,
+      title: "Collections",
+      links: [
+         {
+            id: 1,
+            title: "Fall Color Trends",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "College Football Fan Gear",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Athleisure Essentials",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 4,
+      title: "Shoes",
+      links: [
+         {
+            id: 1,
+            title: "All Shoes",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Lifestyle",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Jordan",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Dunk",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Retro Running",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Air Max",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Air Force 1",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Training & Gym",
+            href: "#"
+         },
+         {
+            id: 9,
+            title: "Basketball",
+            href: "#"
+         },
+         {
+            id: 10,
+            title: "Running",
+            href: "#"
+         },
+         {
+            id: 11,
+            title: "Nike SB",
+            href: "#"
+         },
+         {
+            id: 12,
+            title: "Sandals & Slides",
+            href: "#"
+         },
+         {
+            id: 13,
+            title: "Nike by You",
+            href: "#"
+         },
+         {
+            id: 14,
+            title: "Shoes $100 & Under",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 5,
+      title: "Clothing",
+      links: [
+         {
+            id: 1,
+            title: "All Clothing",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Hoodies & Sweatshirts",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Shorts",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Pants",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Outerwear",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Tops & T-Shirts",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Matching Sets",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Big & Tall",
+            href: "#"
+         },
+         {
+            id: 9,
+            title: "Underwear & More",
+            href: "#"
+         },
+         {
+            id: 10,
+            title: "Jordan",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 6,
+      title: "Accessories",
+      links: [
+         {
+            id: 1,
+            title: "All Accessories",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Bags & Backpacks",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Hats & Headwear",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Sunglasses",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Socks",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 7,
+      title: "Shop by Sport",
+      links: [
+         {
+            id: 1,
+            title: "Basketball",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Running",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Golf",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Soccer",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Training & Gym",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Tennis",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Baseball",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Football",
+            href: "#"
+         },
+         {
+            id: 9,
+            title: "Trail Running",
+            href: "#"
+         },
+         {
+            id: 10,
+            title: "Swimming",
+            href: "#"
+         },
+         {
+            id: 11,
+            title: "Pickleball",
+            href: "#"
+         },
+         {
+            id: 12,
+            title: "Fan Gear",
+            href: "#"
+         }
       ]
    },
 ];
+
+export const navbarCategoryWomenItems = [
+   {
+      id: 1,
+      title: "Limited Time",
+      links: [
+         {
+            id: 1,
+            title: "Extra 20% Off Select Styles",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 2,
+      title: "New",
+      links: [
+         {
+            id: 1,
+            title: "New Arrivals",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Best Sellers",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "New & Upcoming Drops",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 3,
+      title: "Collections",
+      links: [
+         {
+            id: 1,
+            title: "Zenvy",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Canyon Pink Shop",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Fall-Ready Fleece",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 4,
+      title: "Shoes",
+      links: [
+         {
+            id: 1,
+            title: "All Shoes",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Lifestyle",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Jordan",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Dunk",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Retro Running",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Air Max",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Air Force 1",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Training & Gym",
+            href: "#"
+         },
+         {
+            id: 9,
+            title: "Basketball",
+            href: "#"
+         },
+         {
+            id: 10,
+            title: "Running",
+            href: "#"
+         },
+         {
+            id: 11,
+            title: "Nike SB",
+            href: "#"
+         },
+         {
+            id: 12,
+            title: "Sandals & Slides",
+            href: "#"
+         },
+         {
+            id: 13,
+            title: "Nike by You",
+            href: "#"
+         },
+         {
+            id: 14,
+            title: "Shoes $100 & Under",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 5,
+      title: "Clothing",
+      links: [
+         {
+            id: 1,
+            title: "All Clothing",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Hoodies & Sweatshirts",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Shorts",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Pants",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Leggings",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Outerwear",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Tops & T-Shirts",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Skirts & Dresses",
+            href: "#"
+         },
+         {
+            id: 9,
+            title: "Bras",
+            href: "#"
+         },
+         {
+            id: 10,
+            title: "Matching Sets",
+            href: "#"
+         },
+         {
+            id: 11,
+            title: "Plus Size",
+            href: "#"
+         },
+         {
+            id: 12,
+            title: "Jordan",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 6,
+      title: "Accessories",
+      links: [
+         {
+            id: 1,
+            title: "All Accessories",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Bags & Backpacks",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Hats & Headwear",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Sunglasses",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Socks",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 7,
+      title: "Shop by Sport",
+      links: [
+         {
+            id: 1,
+            title: "Basketball",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Running",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Golf",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Soccer",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Fitness",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Tennis",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Yoga",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Trail Running",
+            href: "#"
+         },
+         {
+            id: 9,
+            title: "Softball",
+            href: "#"
+         },
+         {
+            id: 10,
+            title: "Swimming",
+            href: "#"
+         },
+         {
+            id: 11,
+            title: "Pickleball",
+            href: "#"
+         },
+         {
+            id: 12,
+            title: "Fan Gear",
+            href: "#"
+         }
+      ]
+   },
+];
+
+export const navbarCategoryKidItems = [
+   {
+      id: 1,
+      title: "Limited Time",
+      links: [
+         {
+            id: 1,
+            title: "Extra 20% Off Select Styles",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 2,
+      title: "New",
+      links: [
+         {
+            id: 1,
+            title: "New Arrivals",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Best Sellers",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "New & Upcoming Drops",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 3,
+      title: "Collections",
+      links: [
+         {
+            id: 1,
+            title: "Teen Essentials",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "EasyOn",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Fall Fleece",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 4,
+      title: "Shoes by Size",
+      links: [
+         {
+            id: 1,
+            title: "Big Kids (1Y - 7Y)",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Little Kids (8C - 3Y)",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Baby & Toddler (1C - 10C)",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "All Shoes",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Lifestyle",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Jordan",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Dunk",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Retro Running",
+            href: "#"
+         },
+         {
+            id: 9,
+            title: "Air Max",
+            href: "#"
+         },
+         {
+            id: 10,
+            title: "Air Force 1",
+            href: "#"
+         },
+         {
+            id: 11,
+            title: "Basketball",
+            href: "#"
+         },
+         {
+            id: 12,
+            title: "Running",
+            href: "#"
+         },
+         {
+            id: 13,
+            title: "Nike SB",
+            href: "#"
+         },
+         {
+            id: 14,
+            title: "Sandals & Slides",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 5,
+      title: "Clothing by Size",
+      links: [
+         {
+            id: 1,
+            title: "Big Kids (XS - XL)",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Little Kids (4 - 7)",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Baby & Toddler (0M - 4T)",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Extended Sizing",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "All Clothing",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Hoodies & Sweatshirts",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Shorts",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Pants & Tights",
+            href: "#"
+         },
+         {
+            id: 9,
+            title: "Outerwear",
+            href: "#"
+         },
+         {
+            id: 10,
+            title: "Tops & T-Shirts",
+            href: "#"
+         },
+         {
+            id: 11,
+            title: "Skirts & Dresses",
+            href: "#"
+         },
+         {
+            id: 12,
+            title: "Bras",
+            href: "#"
+         },
+         {
+            id: 13,
+            title: "Matching Sets",
+            href: "#"
+         },
+         {
+            id: 14,
+            title: "Jordan",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 6,
+      title: "Accessories",
+      links: [
+         {
+            id: 1,
+            title: "All Accessories",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Bags & Backpacks",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Hats & Headwear",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Sunglasses",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Socks",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 7,
+      title: "Shop by Sport",
+      links: [
+         {
+            id: 1,
+            title: "Basketball",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Running",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Golf",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Soccer",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Baseball",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Football",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Softball",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Tennis",
+            href: "#"
+         },
+         {
+            id: 9,
+            title: "Dance",
+            href: "#"
+         },
+         {
+            id: 10,
+            title: "Swimming",
+            href: "#"
+         },
+         {
+            id: 11,
+            title: "Fan Gear",
+            href: "#"
+         }
+      ]
+   },
+];
+
+export const navbarCategoryJordanItems = [
+   {
+      id: 1,
+      title: "New",
+      links: [
+         {
+            id: 1,
+            title: "New Arrivals",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Best Sellers",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "New in Fleece",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "All Sale",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 2,
+      title: "Collections",
+      links: [
+         {
+            id: 1,
+            title: "Jordan Heat Check",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Trending Colors",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Golf Essentials",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Jordan Sleeper Picks",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 3,
+      title: "Men",
+      links: [
+         {
+            id: 1,
+            title: "Shop All",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Shoes",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "AJ1",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Clothing",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Basketball",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 4,
+      title: "Women",
+      links: [
+         {
+            id: 1,
+            title: "Shop All",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Shoes",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "AJ1",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Clothing",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Basketball",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 5,
+      title: "Kids",
+      links: [
+         {
+            id: 1,
+            title: "Shop All",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Shoes",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "AJ1",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Clothing",
+            href: "#"
+         },
+         {
+            id: 5,
+            title: "Basketball",
+            href: "#"
+         },
+         {
+            id: 6,
+            title: "Big Kids",
+            href: "#"
+         },
+         {
+            id: 7,
+            title: "Little Kids",
+            href: "#"
+         },
+         {
+            id: 8,
+            title: "Baby & Toddler",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 6,
+      title: "Accessories",
+      links: [
+         {
+            id: 1,
+            title: "Shop All",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Bags & Backpacks",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Hats & Headwear",
+            href: "#"
+         }
+      ]
+   }
+];
+
+export const navbarCategorySaleItems = [
+   {
+      id: 1,
+      title: "Limited Time",
+      links: [
+         {
+            id: 1,
+            title: "Extra 20% Off Select Styles",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 1,
+      title: "All Sale",
+      links: [
+         {
+            id: 1,
+            title: "Sale Shoes",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Sale Clothing",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Sale Accessories",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 3,
+      title: "Men",
+      links: [
+         {
+            id: 1,
+            title: "Shoes",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Clothing",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Accessories",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Shop All",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 4,
+      title: "Women",
+      links: [
+         {
+            id: 1,
+            title: "Shoes",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Clothing",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Accessories",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Shop All",
+            href: "#"
+         }
+      ]
+   },
+   {
+      id: 5,
+      title: "Kids",
+      links: [
+         {
+            id: 1,
+            title: "Shoes",
+            href: "#"
+         },
+         {
+            id: 2,
+            title: "Clothing",
+            href: "#"
+         },
+         {
+            id: 3,
+            title: "Accessories",
+            href: "#"
+         },
+         {
+            id: 4,
+            title: "Shop All",
+            href: "#"
+         }
+      ]
+   }
+];
+
+
 
 export const footerItems = [
    {

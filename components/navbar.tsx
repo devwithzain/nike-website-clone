@@ -1,23 +1,32 @@
 "use client";
-import {
-	AnimatePresence,
-	motion,
-	useMotionValueEvent,
-	useScroll,
-} from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { logo } from "@/public";
-import { Heart, Search } from "lucide-react";
 import { useState } from "react";
-import { navbarCategoryItems } from "@/constants";
-import Header from "./header";
+import MegaMenu from "./mega-menu";
+import { Header } from "@/components";
 import { navVariants } from "@/motion";
+import { Heart, Search } from "lucide-react";
+import {
+	motion,
+	useScroll,
+	AnimatePresence,
+	useMotionValueEvent,
+} from "framer-motion";
+import {
+	navbarCategoryNewItems,
+	navbarCategoryMenItems,
+	navbarCategoryJordanItems,
+	navbarCategoryKidItems,
+	navbarCategoryWomenItems,
+	navbarCategorySaleItems,
+} from "@/constants";
 
 export default function Navbar() {
 	const { scrollY } = useScroll();
 	const [hidden, setHidden] = useState(false);
-	const [hovered, setHovered] = useState(false);
+	const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
 	useMotionValueEvent(scrollY, "change", (latest) => {
 		if (latest > 0) {
 			setHidden(true);
@@ -25,6 +34,15 @@ export default function Navbar() {
 			setHidden(false);
 		}
 	});
+
+	const handleMouseEnter = (item: string) => {
+		setHoveredItem(item);
+	};
+
+	const handleMouseLeave = () => {
+		setHoveredItem(null);
+	};
+
 	return (
 		<>
 			<motion.div
@@ -34,7 +52,7 @@ export default function Navbar() {
 				className="fixed w-full top-0 z-50">
 				<motion.div
 					variants={navVariants}
-					animate={hidden ? "hidden" : "vissible"}>
+					animate={hidden ? "hidden" : "visible"}>
 					<Header />
 				</motion.div>
 				<motion.div
@@ -48,25 +66,27 @@ export default function Navbar() {
 								alt="logo"
 							/>
 						</Link>
-						<div className="absolute left-[50%] -translate-x-1/2 flex gap-6 h-full">
-							{["New & Featured", "Man", "Woman", "Kids", "Jordan", "Sale"].map(
+						<div className="absolute left-[50%] -translate-x-1/2 flex gap-8 h-full">
+							{["New", "Men", "Woman", "Kids", "Jordan", "Sale"].map(
 								(item, index) => (
-									<>
+									<div
+										key={index}
+										onMouseEnter={() => handleMouseEnter(item)}
+										onMouseLeave={handleMouseLeave}
+										className="relative flex flex-col items-center">
 										<Link
-											onMouseEnter={() => setHovered(true)}
-											onMouseLeave={() => setHovered(false)}
-											key={index}
-											href={""}
-											className="text-[#111111] font-HelveticaMedium font-medium text-[16px] h-full items-center justify-center flex">
+											href=""
+											className="text-[#111111] font-HelveticaMedium font-medium text-[18px] h-full items-center justify-center flex">
 											{item}
 										</Link>
-									</>
+										<span
+											className={`h-1 bg-black rounded-lg transition-all duration-300 ${
+												hoveredItem === item ? "w-full" : "w-0"
+											}`}
+										/>
+									</div>
 								),
 							)}
-							<span
-								className="absolute left-0 -bottom-2 w-full h-8 cursor-pointer z-50"
-								onMouseEnter={() => setHovered(true)}
-							/>
 						</div>
 						<div className="flex items-center gap-4">
 							<div className="w-full flex bg-[#E5E5E5] rounded-full group">
@@ -105,36 +125,26 @@ export default function Navbar() {
 						</div>
 					</div>
 					<AnimatePresence mode="wait">
-						{hovered && (
-							<motion.div
-								initial={{ scaleY: 0 }}
-								animate={{ scaleY: 1 }}
-								exit={{ scaleY: 0 }}
-								transition={{ duration: 0.3, ease: "linear" }}
-								className="w-full absolute top-16 bg-white origin-top"
-								onMouseLeave={() => setHovered(false)}>
-								<div className="w-full flex items-center justify-center padding">
-									<div className="w-fit flex justify-center gap-20">
-										{navbarCategoryItems.map((item) => (
-											<div
-												className="flex flex-col gap-2"
-												key={item.id}>
-												<h1 className="text-[18px] text-[#111111] font-HelveticaMedium font-medium pb-5">
-													{item.title}
-												</h1>
-												{item.links.map((link) => (
-													<Link
-														className={`flex hover:text-[#111111] flex-col text-[14px] text-[#707072] font-HelveticaMedium`}
-														key={link.id}
-														href={link.href}>
-														{link.title}
-													</Link>
-												))}
-											</div>
-										))}
-									</div>
-								</div>
-							</motion.div>
+						{hoveredItem && (
+							<MegaMenu
+								menuItems={
+									hoveredItem === "New"
+										? navbarCategoryNewItems
+										: hoveredItem === "Men"
+										? navbarCategoryMenItems
+										: hoveredItem === "Woman"
+										? navbarCategoryWomenItems
+										: hoveredItem === "Kids"
+										? navbarCategoryKidItems
+										: hoveredItem === "Jordan"
+										? navbarCategoryJordanItems
+										: hoveredItem === "Sale"
+										? navbarCategorySaleItems
+										: []
+								}
+								onMouseEnter={() => setHoveredItem(hoveredItem)}
+								onMouseLeave={handleMouseLeave}
+							/>
 						)}
 					</AnimatePresence>
 				</motion.div>
