@@ -25,10 +25,6 @@ export const classicShopItem = [
       id: 6,
       src: airforce
    },
-   {
-      id: 7,
-      src: dunk
-   },
 ];
 
 export const shoesCategoryItems = [

@@ -15,3 +15,6 @@ export { default as blazer } from './blazer.jpg';
 export { default as airforce1 } from './airforce1.jpg';
 export { default as vomero } from './vomero.jpg';
 export { default as airforce } from './airforce1.jpg';
+export { default as heroImg } from './heroImg.jpg';
+export { default as arrowLeft } from './arrowLeft.svg';
+export { default as arrowRight } from './arrowRight.svg';

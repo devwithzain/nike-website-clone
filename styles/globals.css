@@ -16,6 +16,11 @@
 	font-family: NikeFutura;
 }
 
+@font-face {
+	src: url("../fonts/HelveticaNowText.woff2");
+	font-family: HelveticaNowText;
+}
+
 @layer utilities {
 	.padding {
 		@apply p-11 lg:p-9 md:p-7 sm:p-5 xm:p-5;

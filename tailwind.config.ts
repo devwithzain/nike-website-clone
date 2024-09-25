@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         NikeFutura: ["NikeFutura", "sans-serif"],
         HelveticaMedium: ["HelveticaMedium", "sans-serif"],
+        HelveticaNowText: ["HelveticaNowText", "sans-serif"],
       },
       screens: {
         xm: { max: "400px" },
