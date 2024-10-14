@@ -8,3 +8,4 @@ export { default as Arrivals } from './arrivals';
 export { default as Classic } from './classic';
 export { default as Hero } from './hero';
 export { default as MegaMenu } from './mega-menu';
+export { default as Home } from './home';

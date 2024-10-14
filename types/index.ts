@@ -11,3 +11,15 @@ export type TmegaMenuProps = {
    onMouseEnter: () => void;
    onMouseLeave: () => void;
 };
+
+export type TbillboardProps = {
+   id: string;
+   label: string;
+   imageUrl: string;
+};
+
+export type TcategoryProps = {
+   id: string;
+   label: string;
+   billboard: TbillboardProps;
+};
