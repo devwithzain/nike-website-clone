@@ -23,17 +23,7 @@ import {
 } from "@/constants";
 
 export default function Navbar() {
-	const { scrollY } = useScroll();
-	const [hidden, setHidden] = useState(false);
 	const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-
-	useMotionValueEvent(scrollY, "change", (latest) => {
-		if (latest > 0) {
-			setHidden(true);
-		} else {
-			setHidden(false);
-		}
-	});
 
 	const handleMouseEnter = (item: string) => {
 		setHoveredItem(item);
@@ -49,17 +39,10 @@ export default function Navbar() {
 				initial="initial"
 				whileInView="enter"
 				variants={navVariants}
-				className="fixed w-full top-0 z-50">
-				<motion.div
-					variants={navVariants}
-					animate={hidden ? "hidden" : "visible"}>
-					<Header />
-				</motion.div>
-				<motion.div
-					className="w-full flex items-center justify-between gap-2 relative"
-					animate={hidden ? { y: -43 } : { y: 0 }}
-					transition={{ duration: 0.5, ease: "easeInOut" }}>
-					<div className="w-full flex items-center justify-between relative h-full py-3 bg-white px-10">
+				className="fixed w-full top-0 z-[200]">
+				<Header />
+				<motion.div className="w-full flex items-center justify-between gap-2 h-[6vh] bg-white">
+					<div className="w-full flex items-center justify-between relative h-full px-10">
 						<Link href="/">
 							<Image
 								src={logo}
@@ -124,30 +107,30 @@ export default function Navbar() {
 							</div>
 						</div>
 					</div>
-					<AnimatePresence mode="wait">
-						{hoveredItem && (
-							<MegaMenu
-								menuItems={
-									hoveredItem === "New"
-										? navbarCategoryNewItems
-										: hoveredItem === "Men"
-										? navbarCategoryMenItems
-										: hoveredItem === "Woman"
-										? navbarCategoryWomenItems
-										: hoveredItem === "Kids"
-										? navbarCategoryKidItems
-										: hoveredItem === "Jordan"
-										? navbarCategoryJordanItems
-										: hoveredItem === "Sale"
-										? navbarCategorySaleItems
-										: []
-								}
-								onMouseEnter={() => setHoveredItem(hoveredItem)}
-								onMouseLeave={handleMouseLeave}
-							/>
-						)}
-					</AnimatePresence>
 				</motion.div>
+				<AnimatePresence mode="wait">
+					{hoveredItem && (
+						<MegaMenu
+							menuItems={
+								hoveredItem === "New"
+									? navbarCategoryNewItems
+									: hoveredItem === "Men"
+									? navbarCategoryMenItems
+									: hoveredItem === "Woman"
+									? navbarCategoryWomenItems
+									: hoveredItem === "Kids"
+									? navbarCategoryKidItems
+									: hoveredItem === "Jordan"
+									? navbarCategoryJordanItems
+									: hoveredItem === "Sale"
+									? navbarCategorySaleItems
+									: []
+							}
+							onMouseEnter={() => setHoveredItem(hoveredItem)}
+							onMouseLeave={handleMouseLeave}
+						/>
+					)}
+				</AnimatePresence>
 			</motion.div>
 		</>
 	);

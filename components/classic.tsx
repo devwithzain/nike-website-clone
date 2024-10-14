@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { Navigation } from "swiper/modules";
 import { AnimatePresence } from "framer-motion";
-import { arrowLeft, arrowRight, logo } from "@/public";
+import { shoesCategoryItems } from "@/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { classicShopItem, shoesCategoryItems } from "@/constants";
+import { arrowLeft, arrowRight, logo } from "@/public";
 
-export default function Classic() {
+export default function Classic({ products }: any) {
 	const swiperRef = useRef<any | null>(null);
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -34,17 +34,22 @@ export default function Classic() {
 				spaceBetween={20}
 				className="relative"
 				onSwiper={(swiper) => (swiperRef.current = swiper)}>
-				{classicShopItem.map((item) => (
+				{products.map((item) => (
 					<SwiperSlide key={item.id}>
 						<div className="w-full flex items-center">
 							<Link
 								href="/"
 								className="w-full shrink-0">
-								<Image
-									src={item.src}
-									alt="shoesImg"
-									className="w-full h-full object-center object-cover"
-								/>
+								{item.images.map((img) => (
+									<Image
+										key={img.id}
+										src={img.url}
+										alt="shoesImg"
+										className="w-full h-full object-center object-cover"
+										width={300}
+										height={300}
+									/>
+								))}
 							</Link>
 						</div>
 					</SwiperSlide>

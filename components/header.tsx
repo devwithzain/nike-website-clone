@@ -9,7 +9,7 @@ export default function Header() {
 	const [hovered, setHovered] = useState(false);
 
 	return (
-		<div className="w-full bg-[#F5F5F5] h-[4vh] flex items-center px-10 z-50">
+		<div className="w-full bg-[#F5F5F5] h-[4vh] flex items-center px-10">
 			<div className="w-full flex justify-between items-center gap-2 h-full">
 				<div className="flex items-center gap-2">
 					<Image
@@ -28,7 +28,7 @@ export default function Header() {
 						Find a Store
 					</Link>
 					<span className="w-[1px] h-[14px] bg-black" />
-					<div className="flex items-center gap-2 relative transition-all duration-200 ease-linear h-full z-[999]">
+					<div className="flex items-center gap-2 relative transition-all duration-200 ease-linear h-full">
 						<div className="flex items-center gap-2 cursor-pointer  relative transition-all duration-200 ease-linear h-full">
 							<Link
 								href={"/help"}
@@ -47,13 +47,13 @@ export default function Header() {
 						<AnimatePresence mode="wait">
 							{hovered && (
 								<motion.div
-									className="absolute py-2 border rounded-lg top-[40px] bg-white left-[-200px] w-[250px] transition-all duration-200 ease-linear shadow-md"
+									className="absolute py-2 border rounded-lg top-[40px] bg-white left-[-200px] w-[250px] transition-all duration-200 ease-linear shadow-md z-50"
 									initial={{ y: -10, opacity: 0 }}
 									animate={{ y: 0, opacity: 1 }}
 									exit={{ y: -10, opacity: 0 }}
 									transition={{
 										duration: 0.5,
-										ease: "backOut",
+										ease: "linear",
 									}}
 									onMouseLeave={() => setHovered(false)}>
 									<h1 className="text-[16px] py-2 px-6 text-[#000] font-HelveticaMedium font-medium">
