@@ -1,13 +1,11 @@
 "use client";
 import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
-import Hero from "./hero";
+import { ThomeProps } from "@/types";
 import WatchVideo from "./watch-videeo";
-import Arrivals from "./arrivals";
-import Category from "./category";
-import Classic from "./classic";
+import Lenis from "@studio-freight/lenis";
+import { Hero, Classic, Category, Arrivals } from "@/components";
 
-export default function Home({ products }: any) {
+export default function Home({ products, billboards }: ThomeProps) {
 	useEffect(() => {
 		const lenis = new Lenis();
 
@@ -20,7 +18,7 @@ export default function Home({ products }: any) {
 	}, []);
 	return (
 		<>
-			<Hero />
+			<Hero billboards={billboards} />
 			<WatchVideo />
 			<Category />
 			<Arrivals />

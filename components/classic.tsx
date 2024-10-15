@@ -3,6 +3,7 @@ import "swiper/css";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { TproductProps } from "@/types";
 import { useRef, useState } from "react";
 import { Navigation } from "swiper/modules";
 import { AnimatePresence } from "framer-motion";
@@ -10,7 +11,7 @@ import { shoesCategoryItems } from "@/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { arrowLeft, arrowRight, logo } from "@/public";
 
-export default function Classic({ products }: any) {
+export default function Classic({ products }: TproductProps) {
 	const swiperRef = useRef<any | null>(null);
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -38,7 +39,7 @@ export default function Classic({ products }: any) {
 					<SwiperSlide key={item.id}>
 						<div className="w-full flex items-center">
 							<Link
-								href="/"
+								href={`/product/${item.id}`}
 								className="w-full shrink-0">
 								{item.images.map((img) => (
 									<Image

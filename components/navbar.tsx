@@ -6,13 +6,9 @@ import { useState } from "react";
 import MegaMenu from "./mega-menu";
 import { Header } from "@/components";
 import { navVariants } from "@/motion";
+import { TcategoriesProps } from "@/types";
 import { Heart, Search } from "lucide-react";
-import {
-	motion,
-	useScroll,
-	AnimatePresence,
-	useMotionValueEvent,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
 	navbarCategoryNewItems,
 	navbarCategoryMenItems,
@@ -22,7 +18,11 @@ import {
 	navbarCategorySaleItems,
 } from "@/constants";
 
-export default function Navbar() {
+export default function Navbar({
+	categories,
+}: {
+	categories: TcategoriesProps;
+}) {
 	const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
 	const handleMouseEnter = (item: string) => {
@@ -38,8 +38,9 @@ export default function Navbar() {
 			<motion.div
 				initial="initial"
 				whileInView="enter"
+				viewport={{ once: true }}
 				variants={navVariants}
-				className="fixed w-full top-0 z-[200]">
+				className="w-full z-[200]">
 				<Header />
 				<motion.div className="w-full flex items-center justify-between gap-2 h-[6vh] bg-white">
 					<div className="w-full flex items-center justify-between relative h-full px-10">
@@ -50,26 +51,24 @@ export default function Navbar() {
 							/>
 						</Link>
 						<div className="absolute left-[50%] -translate-x-1/2 flex gap-8 h-full">
-							{["New", "Men", "Woman", "Kids", "Jordan", "Sale"].map(
-								(item, index) => (
-									<div
-										key={index}
-										onMouseEnter={() => handleMouseEnter(item)}
-										onMouseLeave={handleMouseLeave}
-										className="relative flex flex-col items-center">
-										<Link
-											href=""
-											className="text-[#111111] font-HelveticaMedium font-medium text-[18px] h-full items-center justify-center flex">
-											{item}
-										</Link>
-										<span
-											className={`h-1 bg-black rounded-lg transition-all duration-300 ${
-												hoveredItem === item ? "w-full" : "w-0"
-											}`}
-										/>
-									</div>
-								),
-							)}
+							{categories.categories.map((item) => (
+								<div
+									key={item.id}
+									onMouseEnter={() => handleMouseEnter(item.name)}
+									onMouseLeave={handleMouseLeave}
+									className="relative flex flex-col items-center">
+									<Link
+										href=""
+										className="text-[#111111] font-HelveticaMedium font-medium text-[18px] h-full items-center justify-center flex">
+										{item.name}
+									</Link>
+									<span
+										className={`h-1 bg-black rounded-lg transition-all duration-300 ${
+											hoveredItem === item.name ? "w-full" : "w-0"
+										}`}
+									/>
+								</div>
+							))}
 						</div>
 						<div className="flex items-center gap-4">
 							<div className="w-full flex bg-[#E5E5E5] rounded-full group">
