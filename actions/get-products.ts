@@ -10,7 +10,9 @@ const getProducts = async (query: Query): Promise<Product[]> => {
          sizeId: query.sizeId,
          isFeatured: query.isFeatured,
          categoryId: query.categoryId,
-         isArchived: query.isArchived
+         subcategoryId: query.subcategoryId,
+         productCategory: query.productCategory,
+         isArchived: query.isArchived,
       }
    });
    const response = await fetch(url);

@@ -9,3 +9,4 @@ export { default as Classic } from './classic';
 export { default as Hero } from './hero';
 export { default as MegaMenu } from './mega-menu';
 export { default as Home } from './home';
+export { default as Offer } from './offer';

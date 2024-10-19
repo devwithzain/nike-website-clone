@@ -26,3 +26,37 @@
 		@apply p-11 lg:p-9 md:p-7 sm:p-5 xm:p-5;
 	}
 }
+
+.image-gallery-right-nav {
+	left: 40px;
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+	padding: 10px !important;
+	bottom: 0 !important;
+	top: auto !important;
+	transform: translateY(0%) !important;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+	height: 35px !important;
+	width: 35px !important;
+	background-color: white;
+	border-radius: 50%;
+	color: black;
+}
+
+.image-gallery-icon {
+	/* color: #fff; */
+	transition: all 0.3s ease-out;
+	appearance: none;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	position: absolute;
+	z-index: 4;
+	filter: drop-shadow(0 0px 0px #fff) !important;
+}

@@ -24,6 +24,12 @@ type Category = {
    billboard: Billboard;
 };
 
+type ProductCategory = {
+   id: string;
+   name: string;
+   products: Product[];
+   category: Category[];
+};
 
 type Image = {
    id: string;
@@ -33,6 +39,7 @@ type Image = {
 type Subcategory = {
    id: string;
    name: string;
+   imageUrl: string;
 };
 
 type Color = {
@@ -66,14 +73,18 @@ export type Product = {
    isFeatured: boolean;
    isArchived: boolean;
    images: Image[];
-   category: Category;
    subcategory: Subcategory;
    ProductColor: ProductColor[];
    ProductSize: ProductSize[];
+   ProductCategory: ProductCategory[];
 };
 
 export type TcategoriesProps = {
    categories: Category[];
+};
+
+export type TsubCategoriesProps = {
+   subcategories: Subcategory[];
 };
 
 export type TbillboardsProps = {
@@ -85,8 +96,8 @@ export type TproductProps = {
 };
 
 export type ThomeProps = {
-   products: Product[];
    billboards: TbillboardsProps;
+   subcategories: TsubCategoriesProps;
 };
 
 export type Query = {
@@ -95,4 +106,6 @@ export type Query = {
    sizeId?: string;
    isFeatured?: boolean;
    isArchived?: boolean;
+   subcategoryId?: string;
+   productCategory?: string;
 };
