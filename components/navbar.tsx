@@ -4,7 +4,7 @@ import Image from "next/image";
 import { logo } from "@/public";
 import { useState } from "react";
 import MegaMenu from "./mega-menu";
-import { Header } from "@/components";
+import { Header, Offer } from "@/components";
 import { navVariants } from "@/motion";
 import { TcategoriesProps } from "@/types";
 import { Heart, Search } from "lucide-react";
@@ -40,7 +40,7 @@ export default function Navbar({
 				whileInView="enter"
 				viewport={{ once: true }}
 				variants={navVariants}
-				className="w-full z-[200]">
+				className="absolute top-0 left-0 w-full z-[200]">
 				<Header />
 				<motion.div className="w-full flex items-center justify-between gap-2 h-[6vh] bg-white">
 					<div className="w-full flex items-center justify-between relative h-full px-10">
@@ -51,14 +51,14 @@ export default function Navbar({
 							/>
 						</Link>
 						<div className="absolute left-[50%] -translate-x-1/2 flex gap-8 h-full">
-							{categories.categories.map((item) => (
+							{categories.categories.slice(0, 6).map((item) => (
 								<div
 									key={item.id}
 									onMouseEnter={() => handleMouseEnter(item.name)}
 									onMouseLeave={handleMouseLeave}
 									className="relative flex flex-col items-center">
 									<Link
-										href=""
+										href={`/category/${item.id}`}
 										className="text-[#111111] font-HelveticaMedium font-medium text-[18px] h-full items-center justify-center flex">
 										{item.name}
 									</Link>

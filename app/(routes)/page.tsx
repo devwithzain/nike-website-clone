@@ -1,15 +1,18 @@
-import { Home } from "@/components";
-import getProducts from "@/actions/get-products";
+import { Home, Navbar } from "@/components";
 import getBillboards from "@/actions/get-billboards";
+import getCategories from "@/actions/get-categories";
+import getSubCategories from "@/actions/get-subCategories";
 
 export default async function App() {
-	const products = await getProducts({ isArchived: false });
 	const billboards = await getBillboards();
+	const categories = await getCategories();
+	const subcategories = await getSubCategories();
 	return (
 		<>
+			<Navbar categories={categories} />
 			<Home
-				products={products}
 				billboards={billboards}
+				subcategories={subcategories}
 			/>
 		</>
 	);

@@ -5,7 +5,7 @@ import WatchVideo from "./watch-videeo";
 import Lenis from "@studio-freight/lenis";
 import { Hero, Classic, Category, Arrivals } from "@/components";
 
-export default function Home({ products, billboards }: ThomeProps) {
+export default function Home({ billboards, subcategories }: ThomeProps) {
 	useEffect(() => {
 		const lenis = new Lenis();
 
@@ -22,7 +22,7 @@ export default function Home({ products, billboards }: ThomeProps) {
 			<WatchVideo />
 			<Category />
 			<Arrivals />
-			<Classic products={products} />
+			<Classic subcategories={subcategories} />
 		</>
 	);
 }
