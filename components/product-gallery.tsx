@@ -13,6 +13,7 @@ export default function ProductGallery({ products }: { products: any }) {
 				infinite={true}
 				slideOnThumbnailOver={true}
 				lazyLoad={true}
+				showFullscreenButton={false}
 			/>
 		</>
 	);
