@@ -49,7 +49,6 @@
 }
 
 .image-gallery-icon {
-	/* color: #fff; */
 	transition: all 0.3s ease-out;
 	appearance: none;
 	background-color: transparent;
@@ -59,4 +58,20 @@
 	position: absolute;
 	z-index: 4;
 	filter: drop-shadow(0 0px 0px #fff) !important;
+}
+
+.image-gallery-thumbnail:hover {
+	outline: none;
+	border: none !important;
+}
+
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+	outline: none;
+	border: none !important;
+	filter: brightness(0.8);
+}
+
+.image-gallery-thumbnail {
+	border: none !important;
 }
