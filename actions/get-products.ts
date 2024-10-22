@@ -8,6 +8,7 @@ const getProducts = async (query: Query): Promise<Product[]> => {
       query: {
          colorId: query.colorId,
          sizeId: query.sizeId,
+         categoryName: query.categoryName,
          isFeatured: query.isFeatured,
          categoryId: query.categoryId,
          subcategoryId: query.subcategoryId,

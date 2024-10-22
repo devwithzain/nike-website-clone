@@ -13,8 +13,6 @@ export default function MegaMenu({
 			<motion.div
 				initial={{ height: 0 }}
 				whileInView={{ height: "auto" }}
-				transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
-				exit={{ height: 0 }}
 				className="w-full bg-white"
 				onMouseEnter={onMouseEnter}
 				onMouseLeave={onMouseLeave}>
@@ -24,10 +22,6 @@ export default function MegaMenu({
 							<motion.div
 								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
-								transition={{
-									ease: [0.33, 1, 0.68, 1],
-								}}
-								exit={{ opacity: 0 }}
 								className="flex flex-col gap-2"
 								key={item.id}>
 								<>

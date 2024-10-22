@@ -103,6 +103,7 @@ export type ThomeProps = {
 export type Query = {
    categoryId?: string;
    colorId?: string;
+   categoryName?: string;
    sizeId?: string;
    isFeatured?: boolean;
    isArchived?: boolean;

@@ -4,8 +4,7 @@ import Image from "next/image";
 import { logo } from "@/public";
 import { useState } from "react";
 import MegaMenu from "./mega-menu";
-import { Header, Offer } from "@/components";
-import { navVariants } from "@/motion";
+import { Header } from "@/components";
 import { TcategoriesProps } from "@/types";
 import { Heart, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,12 +34,7 @@ export default function Navbar({
 
 	return (
 		<>
-			<motion.div
-				initial="initial"
-				whileInView="enter"
-				viewport={{ once: true }}
-				variants={navVariants}
-				className="absolute top-0 left-0 w-full z-[200]">
+			<motion.div className="absolute top-0 left-0 w-full z-[200]">
 				<Header />
 				<motion.div className="w-full flex items-center justify-between gap-2 h-[6vh] bg-white">
 					<div className="w-full flex items-center justify-between relative h-full px-10">
@@ -58,8 +52,8 @@ export default function Navbar({
 									onMouseLeave={handleMouseLeave}
 									className="relative flex flex-col items-center">
 									<Link
-										href={`/category/${item.id}`}
-										className="text-[#111111] font-HelveticaMedium font-medium text-[18px] h-full items-center justify-center flex">
+										href={`/category/${item.name}/${item.id}`}
+										className="text-[#111111] font-HelveticaMedium font-medium text-[18px] h-full items-center justify-center flex capitalize">
 										{item.name}
 									</Link>
 									<span
@@ -111,17 +105,17 @@ export default function Navbar({
 					{hoveredItem && (
 						<MegaMenu
 							menuItems={
-								hoveredItem === "New"
+								hoveredItem === "new"
 									? navbarCategoryNewItems
-									: hoveredItem === "Men"
+									: hoveredItem === "men"
 									? navbarCategoryMenItems
-									: hoveredItem === "Woman"
+									: hoveredItem === "woman"
 									? navbarCategoryWomenItems
-									: hoveredItem === "Kids"
+									: hoveredItem === "kids"
 									? navbarCategoryKidItems
-									: hoveredItem === "Jordan"
+									: hoveredItem === "jordan"
 									? navbarCategoryJordanItems
-									: hoveredItem === "Sale"
+									: hoveredItem === "sale"
 									? navbarCategorySaleItems
 									: []
 							}

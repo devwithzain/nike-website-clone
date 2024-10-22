@@ -43,7 +43,7 @@ export default function Classic({
 					<SwiperSlide key={item.id}>
 						<div className="w-full flex items-center">
 							<Link
-								href={`/subcategory/${item.id}`}
+								href={`/subcategory/${item.name}/${item.id}`}
 								className="w-full">
 								<Image
 									key={item.id}
