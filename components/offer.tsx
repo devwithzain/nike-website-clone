@@ -57,7 +57,7 @@ export default function Header() {
 							className="flex items-center justify-center">
 							<div className="w-full flex justify-center">
 								<Link href={`/`}>
-									<span className="text-[12px] leading-tight font-medium font-HelveticaNowText text-center">
+									<span className="text-[13px] leading-tight font-HelveticaMedium text-center">
 										{item}
 									</span>
 								</Link>

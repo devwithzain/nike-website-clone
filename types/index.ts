@@ -69,6 +69,9 @@ type ProductSize = {
 export type Product = {
    id: string;
    name: string;
+   material: string;
+   sale: string;
+   rating: string;
    price: number;
    isFeatured: boolean;
    isArchived: boolean;
