@@ -1,9 +1,9 @@
+import Image from "next/image";
+import { star } from "@/public";
 import { Navbar, Offer } from "@/components";
 import getProduct from "@/actions/get-product";
 import getCategories from "@/actions/get-categories";
 import ProductGallery from "@/components/product-gallery";
-import Image from "next/image";
-import { star } from "@/public";
 
 export default async function Product({
 	params,
@@ -14,11 +14,6 @@ export default async function Product({
 	const [category, subcategory, productId] = slug;
 	const categories = await getCategories();
 	const product = await getProduct(productId, category, subcategory);
-
-	const galleryImages = product.images.map((item) => ({
-		original: item.url,
-		thumbnail: item.url,
-	}));
 
 	return (
 		<>
@@ -38,7 +33,7 @@ export default async function Product({
 							/>
 							{product.rating}
 						</h1>
-						<ProductGallery products={galleryImages} />
+						<ProductGallery products={product} />
 					</div>
 					<div className="flex-1 flex flex-col gap-5">
 						<div className="flex gap-2 flex-col">
