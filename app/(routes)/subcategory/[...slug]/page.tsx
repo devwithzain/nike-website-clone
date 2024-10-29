@@ -12,7 +12,7 @@ export default async function SubCategoryPage({
 }) {
 	const { slug } = params;
 	const [subcategoryName, subcategoryId] = slug;
-	const categories = await getCategories();
+	// const categories = await getCategories();
 	const products = await getProducts({
 		subcategoryId: subcategoryId,
 	});
@@ -21,7 +21,7 @@ export default async function SubCategoryPage({
 
 	return (
 		<>
-			<Navbar categories={categories} />
+			{/* <Navbar categories={categories} /> */}
 			<div className="w-full absolute top-[10vh] -z-10">
 				<Offer />
 			</div>
@@ -51,19 +51,23 @@ export default async function SubCategoryPage({
 					{products.map((item) => (
 						<div key={item.id}>
 							<Link
-								href={`/product/${item.ProductCategory.map((item) =>
+								href={`/product/${item.productCategory.map((item) =>
 									item.name.toLocaleLowerCase(),
 								)}/
 								${item.subcategory.name}/
 								${item.id}`}>
-								<Image
-									key={item.id}
-									src={item.images.map((image) => image.url)[1]}
-									alt="product"
-									width={400}
-									height={400}
-									className="w-full h-full object-cover"
-								/>
+								{item.productColor.slice(0, 1).map((productColor) =>
+									productColor.color.images.slice(0, 1).map((item) => (
+										<Image
+											key={item.id}
+											src={item.url}
+											alt="product"
+											width={400}
+											height={400}
+											className="w-full h-full object-cover"
+										/>
+									)),
+								)}
 							</Link>
 						</div>
 					))}

@@ -19,3 +19,4 @@ export { default as heroImg } from './heroImg.jpg';
 export { default as arrowLeft } from './arrowLeft.svg';
 export { default as arrowRight } from './arrowRight.svg';
 export { default as star } from './star.svg';
+export { default as guide } from './guide.svg';

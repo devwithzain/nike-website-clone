@@ -33,7 +33,7 @@ type ProductCategory = {
 
 type Image = {
    id: string;
-   url: string;
+   url: string[];
 };
 
 type Subcategory = {
@@ -45,14 +45,16 @@ type Subcategory = {
 type Color = {
    id: string;
    name: string;
-   value: string;
+   images: Image[];
 };
+
 
 type ProductColor = {
    id: string;
    name: string;
    color: Color;
 };
+
 
 type Size = {
    id: string;
@@ -75,11 +77,10 @@ export type Product = {
    price: number;
    isFeatured: boolean;
    isArchived: boolean;
-   images: Image[];
    subcategory: Subcategory;
-   ProductColor: ProductColor[];
-   ProductSize: ProductSize[];
-   ProductCategory: ProductCategory[];
+   productColor: ProductColor[];
+   productSize: ProductSize[];
+   productCategory: ProductCategory[];
 };
 
 export type TcategoriesProps = {
